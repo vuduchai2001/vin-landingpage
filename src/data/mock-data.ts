@@ -1,14 +1,3 @@
-export const bannerImages = [
-  {
-    src: '/images/slider-home/banner-vinfast-vf8-24726-pc-08-1536x496.jpg',
-    alt: 'VinFast Background',
-  },
-  {
-    src: '/images/slider-home/vinfast-vf9-241212-banner-pc01-2048x661.jpg',
-    alt: 'Banner VF8',
-  },
-]
-
 export const vinfastCars = [
   {
     name: 'VINFAST VF 3',

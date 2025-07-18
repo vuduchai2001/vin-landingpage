@@ -1,54 +1,20 @@
 'use client'
 
+import { greenCars } from "@/data/mock-data"
 import { ChevronRight } from "lucide-react"
 
 export default function VinFastGreen() {
-  const cars = [
-    {
-      name: 'VINFAST MINIO GREEN',
-      price: '269.000.000 VNĐ',
-      seats: '4 chỗ',
-      range: '>170 km/lần sạc',
-      power: '20 kw',
-      image: '/images/cars/vinfast-minio.png',
-    },
-    {
-      name: 'VINFAST HERIO GREEN',
-      price: '499.000.000 VNĐ',
-      seats: '5 chỗ',
-      range: '326 km/lần sạc',
-      power: '100 kw',
-      image: '/images/cars/vinfast-herio.png',
-    },
-    {
-      name: 'VINFAST NERIO GREEN',
-      price: '668.000.000 VNĐ',
-      seats: '5 chỗ',
-      range: '318,6 km/lần sạc',
-      power: '110 kw',
-      image: '/images/cars/vinfast-nerio.png',
-    },
-    {
-      name: 'VINFAST LIMO GREEN',
-      price: '749.000.000 VNĐ',
-      seats: '7 chỗ',
-      range: '450 km/lần sạc',
-      power: '150 kw',
-      image: '/images/cars/vinfast-limo.png',
-    },
-  ]
-
   return (
     <div
       className="w-full"
-      style={{ backgroundImage: 'url(https://vinfastautolongbien.vn/wp-content/uploads/2025/03/bg-vgd.jpg)' }}
+      style={{ backgroundImage: 'url("/images/vinfast-green-bg.jpg")' }}
     >
       <div className="mx-auto max-w-[1080px] px-4 pb-[60px] pt-[50px] text-center">
         <h2 className="text-[26px] font-semibold text-black">VINFAST GREEN</h2>
         <p className="mt-[13px] text-[17px] text-black">VINFAST GREEN – DÒNG XE DỊCH VỤ</p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {cars.map((car) => (
+          {greenCars.map((car) => (
             <div
               key={car.name}
               className="flex flex-col items-center justify-between rounded bg-white px-[10px] pt-[0px] pb-[20px]"

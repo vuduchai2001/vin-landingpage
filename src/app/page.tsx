@@ -1,5 +1,6 @@
 import CarList from '@/components/home/CarList';
 import HeroSlider from '@/components/home/HeroSlider';
+import NewsSection from '@/components/home/NewsSection';
 import VinFastGreen from '@/components/home/VinFastGreen';
 import { Metadata } from 'next';
 import Image from 'next/image'
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSlider />
       <CarList />
       <VinFastGreen />
+      <NewsSection />
     </div>
   )
 }

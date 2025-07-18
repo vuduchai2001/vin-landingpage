@@ -2,46 +2,14 @@
 
 import Image from 'next/image'
 import { Gift, Menu } from 'lucide-react'
-
-const cars = [
-  {
-    name: 'VINFAST VF 3',
-    price: '299.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf3.jpg',
-  },
-  {
-    name: 'VINFAST VF 5',
-    price: '529.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf5.jpg',
-  },
-  {
-    name: 'VINFAST VF 6',
-    price: '689.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf6.jpg',
-  },
-  {
-    name: 'VINFAST VF 7',
-    price: '799.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf7.jpg',
-  },
-  {
-    name: 'VINFAST VF 8',
-    price: '1.019.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf8.jpg',
-  },
-  {
-    name: 'VINFAST VF 9',
-    price: '1.499.000.000 VNĐ',
-    image: '/images/cars/vinfast-vf9.jpg',
-  },
-]
+import { vinfastCars } from '@/data/mock-data'
 
 export default function CarList() {
   return (
     <div className="max-w-[1080px] mx-auto px-4 py-8">
       <h2 className="text-[30px] font-bold text-black mb-4 text-center">XE Ô TÔ ĐIỆN VINFAST</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-        {cars.map((car, index) => (
+        {vinfastCars.map((car, index) => (
           <div
             key={index}
             className="px-[15px] pb-[30px] flex flex-col items-center text-center"
