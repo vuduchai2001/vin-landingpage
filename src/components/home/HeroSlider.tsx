@@ -56,7 +56,7 @@ export default function HeroSlider() {
   }
 
   return (
-    <div className="relative w-full overflow-hidden h-[500px] group">
+    <div className="relative w-full overflow-hidden h-[300px] sm:h-[400px] lg:h-[500px] group">
       {images.map((image, index) => {
         const isCurrent = index === current
         const isPrev = index === prev
@@ -77,9 +77,8 @@ export default function HeroSlider() {
               <Image
                 src={image.src}
                 alt={image.alt}
-                width={2100}
-                height={678}
-                className="w-full h-auto object-cover"
+                fill
+                className="w-full h-full object-cover"
                 priority={isCurrent}
               />
             </div>
@@ -91,7 +90,7 @@ export default function HeroSlider() {
         onMouseDown={() => handleHoldStart('prev')}
         onMouseUp={handleHoldEnd}
         onMouseLeave={handleHoldEnd}
-        className="absolute left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black opacity-0 transition-opacity group-hover:opacity-100"
+        className="absolute left-2 sm:left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black opacity-0 transition-opacity group-hover:opacity-100"
         aria-label="Previous Slide"
       >
         <ChevronLeft size={24} />
@@ -100,14 +99,14 @@ export default function HeroSlider() {
         onMouseDown={() => handleHoldStart('next')}
         onMouseUp={handleHoldEnd}
         onMouseLeave={handleHoldEnd}
-        className="absolute right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black opacity-0 transition-opacity group-hover:opacity-100"
+        className="absolute right-2 sm:right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/80 p-2 text-black opacity-0 transition-opacity group-hover:opacity-100"
         aria-label="Next Slide"
       >
         <ChevronRight size={24} />
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 z-50 flex -translate-x-1/2 gap-2">
+      <div className="absolute bottom-3 sm:bottom-5 left-1/2 z-50 flex -translate-x-1/2 gap-2">
         {images.map((_, index) => (
           <button
             key={index}
@@ -115,7 +114,7 @@ export default function HeroSlider() {
               if (index === current) return
               changeSlide(index, index > current ? 'right' : 'left')
             }}
-            className={`h-3 w-3 rounded-full transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/50'}`}
+            className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${current === index ? 'bg-white' : 'bg-white/50'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

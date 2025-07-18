@@ -33,15 +33,18 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-6 text-sm flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4">
-          <div className="flex gap-6 mb-2 md:mb-0 text-gray-400">
-            <Link href="#">TRANG CHỦ</Link>
-            <Link href="#">TRẢI NGHIỆM KHÁCH HÀNG</Link>
-            <Link href="#">LIÊN HỆ</Link>
+        <div className='flex flex-col md:flex-row md:items-center justify-between'>
+          <div className="text-[12px] flex flex-col items-start">
+            <div className="flex gap-6 mb-2 md:mb-0 text-gray-500 border-b pb-1 border-gray-700">
+              <Link className='hover:text-white' href="#">TRANG CHỦ</Link>
+              <Link className='hover:text-white' href="#">TRẢI NGHIỆM KHÁCH HÀNG</Link>
+              <Link className='hover:text-white' href="#">LIÊN HỆ</Link>
+            </div>
+            <div className="text-gray-400 pt-1 text-[12px]">
+              Copyright 2025 © vinfastautolongbien.vn
+            </div>
           </div>
-          <div className="text-gray-400">
-            Copyright 2025 © vinfastautolongbien.vn
-          </div>
+          <a className='text-gray-400 hover:text-white text-[14px]' href="#">VinFast Long Biên - Hà Nội</a>
         </div>
       </div>
     </footer>
