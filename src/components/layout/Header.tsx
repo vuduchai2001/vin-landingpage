@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Menu, Search, ChevronDown, ChevronUp, X, Gift } from 'lucide-react'
+import { Menu, Search, ChevronDown, ChevronUp, X } from 'lucide-react'
 
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -13,7 +13,7 @@ const navItems = [
   { label: 'Trang chủ', href: '/' },
   {
     label: 'Ô tô VinFast',
-    href: '/vinfast-vf',
+    href: '/san-pham/o-to-vinfast',
     subMenuItems: [
       { label: 'VinFast VF 3', href: '/vinfast-vf3' },
       { label: 'VinFast VF 5', href: '/vinfast-vf5' },
@@ -25,12 +25,12 @@ const navItems = [
   },
   {
     label: 'VinFast Green',
-    href: '/vinfast-green',
+    href: '/san-pham/vinfast-green',
     subMenuItems: [
       { label: 'VinFast Mini Green', href: '/vinfast-mini-green' },
     ],
   },
-  { label: 'Pin và trạm sạc', href: '/pin-tram-sac' },
+  { label: 'Pin và trạm sạc', href: '/pin-va-tram-sac' },
   { label: 'Tin tức', href: '/tin-tuc' },
   { label: 'Liên hệ', href: '/lien-he' },
 ]
