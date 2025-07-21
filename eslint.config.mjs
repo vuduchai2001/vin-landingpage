@@ -6,12 +6,7 @@ const compat = new FlatCompat({
  
 const eslintConfig = [
   ...compat.config({
-    extends: ['next'],
-    settings: {
-      next: {
-        rootDir: 'packages/my-app/',
-      },
-    },
+    extends: ['next', 'prettier'],
   }),
 ]
  
