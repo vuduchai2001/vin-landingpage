@@ -15,6 +15,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  poweredByHeader: false,
+  reactStrictMode: true,
+  output: 'standalone',
 }
 
 export default nextConfig
